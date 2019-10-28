@@ -1,0 +1,22 @@
+    1  cd ~/Documents/work/Software_Carpentry_workshop/workshop_revisit
+    2  ls -a
+    3  ls
+    4  ls -a
+    5  git init
+    6  mkdir r_lesson
+    7  cp .gapminder_clean.csv r_lesson/gapminder.csv
+    8  ls r_lesson/
+    9  git status
+   10  cd r_lesson/
+   11  git status
+   12  cd ..
+   13  git status
+   14  git add r_lesson/
+   15  git status
+   16  git commit -message "prep for r lesson"
+   17  git commit --message "prep for r lesson"
+   18  git remote add origin https://github.com/lossanna/workshop_revisit.git
+   19  git push -u origin master
+   20  git remote --verbose
+   21  git push
+   22  history > history_r_lesson.txt

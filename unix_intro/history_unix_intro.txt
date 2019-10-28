@@ -1,0 +1,155 @@
+    1  cd ~/Documents/work/Software_Carpentry_workshop/workshop_revisit
+    2  head example.txt
+    3  cd unix_intro/
+    4  head example.txt 
+    5  ls
+    6  ls experiment/
+    7  cd
+    8  cd experiment/
+    9  pwd
+   10  cd ~/Documents/work/Software_Carpentry_workshop/workshop_revisit/unix_intro
+   11  cd experiment/
+   12  head notes.txt
+   13  pwd
+   14  ls
+   15  cd ..
+   16  ls
+   17  head example.txt 
+   18  tail example.txt 
+   19  less example.txt 
+   20  wc example.txt 
+   21  wc -l example.txt 
+   22  ls
+   23  cp example.txt example_copy.txt
+   24  ls data/
+   25  cp example.txt data/example_copy.txt
+   26  ls data/
+   27  ls
+   28  cp experiment/notes.txt.
+   29  cp experiment/notes.txt .
+   30  ls
+   31  ls experiment/
+   32  mv example_copy.txt experiment/
+   33  ls
+   34  ls experiment/
+   35  ls
+   36  mv notes.txt notes_old.txt
+   37  nano sample_names.txt
+   38  ls
+   39  head sample_names.txt 
+   40  ls
+   41  mkdir subset
+   42  ls
+   43  rmdir subset/
+   44  ls
+   45  rmdir experiment/
+   46  wc -l example.txt 
+   47  ls
+   48  ls | wc -l
+   49  ls data/all_samples/
+   50  ls data/all_samples/ | wc -l
+   51  ls
+   52  ls > directory_contents.txt
+   53  ls
+   54  head directory_contents.txt 
+   55  ls experiment/ > directory_contents.txt 
+   56  head directory_contents.txt 
+   57  ls >> directory_contents.txt 
+   58  head directory_contents.txt 
+   59  ls *.txt
+   60  cd data/all_samples/
+   61  ls
+   62  ls | wc -l
+   63  ls *.txt | wc -l
+   64  ls *.tsv | wc -l
+   65  ls *.fq | wc -l
+   66  ls | wc -l
+   67  mk dir fastq_files
+   68  mkdir fastq_files
+   69  ls fastq_files/
+   70  ls *.fq
+   71  mv *.fq fastq_files/
+   72  ls fastq_files/
+   73  ls | wc -l
+   74  history | tail
+   75  history | less
+   76  less --help
+   77  mkdir text_files
+   78  ls *.txt
+   79  mv *.txt text_files/
+   80  mkdir tsv_files
+   81  ls *.tsv
+   82  mv *.tsv tsv_files/
+   83  ls
+   84  cd fastq_files/
+   85  ls sample_1 *.fq
+   86  ls sample_1 ?.fq
+   87  ls sample_1?.fq
+   88  cd ..
+   89  cd ..
+   90  pwd
+   91  cd ..
+   92  pwd
+   93  cd six_commands/
+   94  head gene_annotations.tsv
+   95  head -n 1 gene_annotations.tsv
+   96  wc -l gene_annotations.tsv
+   97  cut -f 1 gene_annotations.tsv
+   98  cut -f gene_annotations.tsv | head
+   99  cut -f 1 gene_annotations.tsv | head
+  100  cut -f 1,3 gene_annotations.tsv
+  101  cut -f 1-3 gene_annotations.tsv | head
+  102  cut -f 1-3 example_gene_annotations.csv | head
+  103  cut -d , -f 1-3 example_gene_annotations.csv | head
+  104  cut -f 1,4 gene_annotations.tsv | head
+  105  cut -f 1,4 gene_annotations.tsv > IDs_and_annotations.tsv
+  106  head IDs_and_annotations.tsv 
+  107  wc -l IDs_and_annotations.tsv 
+  108  head colors.txt
+  109  grep blue colors.txt
+  110  grep re color
+  111  grep re colors.txt 
+  112  grep black colors.txt 
+  113  head -n gene_annotations.tsv
+  114  head -n 1 gene_annotations.tsv
+  115  grep K09765 gene_annotations.tsv
+  116  grep K18979 gene_annotations.tsv
+  117  grep K18979 gene_annotations.tsv | cut -f 2
+  118  grep -c K18979 gene_annotations.tsv
+  119  head colores.txt 
+  120  past colors.txt colores.txt 
+  121  paste colors.txt colores.txt 
+  122  head genes_and_seqs.tsv 
+  123  less -S genes_and_seqs.tsv 
+  124  paste gene_annotations.tsv genes_and_seqs.tsv | head -n 1
+  125  paste gene_annotations.tsv genes_and_seqs.tsv | cut -f 1-4,6- | head -n 2
+  126  cd ..
+  127  my_var=ANGUS
+  128  echo $my_var
+  129  echo my_var
+  130  my_new_var="Tucson, AZ, USA"
+  131  echo $my_new_var 
+  132  mkdir for_loops
+  133  cd for_loops/
+  134  for item in earth mars venus; do echo $item; done
+  135  for word in earth mars venus; do echo $word; done
+  136  for item in earth mars venus; do echo $item; echo $item >> planets.txt; done
+  137  ls
+  138  head planets.txt 
+  139  for item in earth mars venus; do echo $item; done > test.txt
+  140  head test.txt 
+  141  cat planets.txt 
+  142  for item in $(cat planets.txt); do echo $item; done
+  143  echo $(cat planets.txt )
+  144  cp ~/Documents/work/Software_Carpentry_workshop/worksho_revisit/unix_intro/six_commands/genes_and_seqs.tsv .
+  145  cp ~/Documents/work/Software_Carpentry_workshop/workshop_revisit/unix_intro/six_commands/genes_and_seqs.tsv .
+  146  head -n 1 genes_and_seqs.tsv 
+  147  cut -f 1 genes_and_seqs.tsv | tail -n +2 > ids.tmp
+  148  cut -f 3 genes_and_seqs.tsv | tail -n +2 > seqs.tmp
+  149  head ids.tmp
+  150  head seqs.tmp
+  151  sed 's/^/>/' ids.tmp > fasta_ids.tmp
+  152  head fasta_ids.tmp
+  153  for information, lowkey just gave up on this bonus exercise
+  154  cd ..
+  155  history > history_unix_intro.txt
